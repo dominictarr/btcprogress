@@ -15,6 +15,6 @@ Include a bar showing progress towards a funding target like this:
 Currently, this project just exports a express style middleware, that you can include in your own servers.
 
 ``` js
-require('http').createServer(require('btcprogress')).listen(8000)
+require('http').createServer(require('btcprogress')()).listen(8000)
 ```
 
