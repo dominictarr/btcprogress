@@ -46,8 +46,9 @@ function middleware () {
 
     if (!match(':address/:balance')) {
         // TODO return root index.html
-        if (next) return next()
-        error('Missing address and/or balance')
+        if (next)
+          return next()
+        return error('Missing address and/or balance')
     }
 
     balance(match.params.address, function (err, data) {
